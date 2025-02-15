@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import ProductList from '../components/ProductList/ProductList'
 import apiClient from '../axios/apiClient'
+import Country from '../components/Country/Country'
 
 function Home() {
   const [list,setList] = useState([])
@@ -24,6 +25,7 @@ function Home() {
   return (
     <div>
       <ProductList data={list} />
+      <Country/>
     </div>
   )
 }
