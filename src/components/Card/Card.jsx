@@ -1,12 +1,13 @@
 import React from 'react'
 import "./Card.css"
+import { Link } from 'react-router-dom'
 
 function Card({food}) {
   return (
     <div className='meals'>
-        <div>
+        <Link to={`/info/${food.idMeal}`}>
             <img className='meal-img' src={food.strMealThumb} alt={food.strMeal} />
-        </div>
+        </Link>
         <h2>{food.strMeal}</h2>
         
 
